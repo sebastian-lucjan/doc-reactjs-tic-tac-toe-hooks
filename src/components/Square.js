@@ -7,4 +7,3 @@ export const Square = (props) => {
     </button>
   );
 };
-// this.props.fieldNumber
