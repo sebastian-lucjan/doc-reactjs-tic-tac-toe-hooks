@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Board } from './Board';
+import styles from './_Game.module.scss';
 
 const calculateWinner = (squares) => {
   const lines = [
@@ -29,7 +30,6 @@ export const Game = () => {
   const [stepNumber, setStepNumber] = useState(0);
 
   const handleFieldClick = (fieldNumber) => {
-    // console.log(stepNumber);
     const historyFromCurrent = history.slice(0, stepNumber + 1);
 
     const current = historyFromCurrent[historyFromCurrent.length - 1];
@@ -58,7 +58,9 @@ export const Game = () => {
     const desc = move ? 'Go to move #' + move : 'Go to game start';
     return (
       <li key={move}>
-        <button onClick={() => jumpTo(move)}>{desc}</button>
+        <button className={styles.historyBtn} onClick={() => jumpTo(move)}>
+          {desc}
+        </button>
       </li>
     );
   });
@@ -71,11 +73,11 @@ export const Game = () => {
   }
 
   return (
-    <div className="game">
-      <div className="game-board">
+    <div className={styles.game}>
+      <div className={styles.gameBoard}>
         <Board squares={current.squares} onClick={(i) => handleFieldClick(i)} />
       </div>
-      <div className="game-info">
+      <div className={styles.gameInfo}>
         <div>{status}</div>
         <ol>{moves}</ol>
       </div>

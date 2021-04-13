@@ -1,0 +1,50 @@
+.game {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.gameBoard {
+  height: 90px;
+  width: 90px;
+}
+.gameInfo {
+  background-color: #e9723d;
+  text-align: center;
+  height: 100%;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #0b7fab;
+  min-width: 180px;
+}
+
+li {
+  display: block;
+  width: 120px;
+}
+
+.historyBtn {
+  display: block;
+  background-color: #f4d75e;
+  box-shadow: 5px 5px 0 #0b7fab;
+  border: none;
+  padding: 5px;
+  margin: 10px 0;
+  width: 155px;
+  text-decoration: none;
+  transition: 0.2s;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+.historyBtn:active {
+  display: block;
+  background-color: #caac35;
+  box-shadow: 5px 5px 0 #0b7fab;
+  border: none;
+  padding: 5px;
+  margin: 10px 0;
+  width: 120px;
+  text-decoration: none;
+}
